@@ -13,6 +13,8 @@
 		2825768020872EC0004D1D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2825767F20872EC0004D1D38 /* Assets.xcassets */; };
 		2825768320872EC0004D1D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2825768120872EC0004D1D38 /* LaunchScreen.storyboard */; };
 		2825768620872EC0004D1D38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825768520872EC0004D1D38 /* main.m */; };
+		282576902087384E004D1D38 /* AVPlayerPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825768F2087384E004D1D38 /* AVPlayerPracticeViewController.m */; };
+		2825769320875C3B004D1D38 /* FFAVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825769220875C3B004D1D38 /* FFAVPlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		2825768220872EC0004D1D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2825768420872EC0004D1D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2825768520872EC0004D1D38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2825768D208730B5004D1D38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2825768E2087384E004D1D38 /* AVPlayerPracticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerPracticeViewController.h; sourceTree = "<group>"; };
+		2825768F2087384E004D1D38 /* AVPlayerPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerPracticeViewController.m; sourceTree = "<group>"; };
+		2825769120875C3B004D1D38 /* FFAVPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAVPlayerManager.h; sourceTree = "<group>"; };
+		2825769220875C3B004D1D38 /* FFAVPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAVPlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +51,7 @@
 			children = (
 				2825767520872EC0004D1D38 /* FFAVPlayer */,
 				2825767420872EC0004D1D38 /* Products */,
+				2825768C208730B4004D1D38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +70,10 @@
 				2825767720872EC0004D1D38 /* AppDelegate.m */,
 				2825767920872EC0004D1D38 /* ViewController.h */,
 				2825767A20872EC0004D1D38 /* ViewController.m */,
+				2825768E2087384E004D1D38 /* AVPlayerPracticeViewController.h */,
+				2825768F2087384E004D1D38 /* AVPlayerPracticeViewController.m */,
+				2825769120875C3B004D1D38 /* FFAVPlayerManager.h */,
+				2825769220875C3B004D1D38 /* FFAVPlayerManager.m */,
 				2825767C20872EC0004D1D38 /* Main.storyboard */,
 				2825767F20872EC0004D1D38 /* Assets.xcassets */,
 				2825768120872EC0004D1D38 /* LaunchScreen.storyboard */,
@@ -69,6 +81,14 @@
 				2825768520872EC0004D1D38 /* main.m */,
 			);
 			path = FFAVPlayer;
+			sourceTree = "<group>";
+		};
+		2825768C208730B4004D1D38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2825768D208730B5004D1D38 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +164,8 @@
 			files = (
 				2825767B20872EC0004D1D38 /* ViewController.m in Sources */,
 				2825768620872EC0004D1D38 /* main.m in Sources */,
+				2825769320875C3B004D1D38 /* FFAVPlayerManager.m in Sources */,
+				282576902087384E004D1D38 /* AVPlayerPracticeViewController.m in Sources */,
 				2825767820872EC0004D1D38 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UKS39HDUB;
 				INFOPLIST_FILE = FFAVPlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.FFAVPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,7 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UKS39HDUB;
 				INFOPLIST_FILE = FFAVPlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.code.FFAVPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,7 +6,10 @@
 //  Copyright © 2018年 cts. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ViewController.h" 
+#import <AVFoundation/AVFoundation.h>
+#import "AVPlayerPracticeViewController.h"
+
 
 @interface ViewController ()
 
@@ -16,13 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)AVPlayerPractice:(UIButton *)sender {
+    AVPlayerPracticeViewController *playerPractice = [[AVPlayerPracticeViewController alloc] init];
+    [self.navigationController pushViewController:playerPractice animated:YES];
 }
 
 
