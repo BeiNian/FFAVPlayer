@@ -13,8 +13,8 @@
 		2825768020872EC0004D1D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2825767F20872EC0004D1D38 /* Assets.xcassets */; };
 		2825768320872EC0004D1D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2825768120872EC0004D1D38 /* LaunchScreen.storyboard */; };
 		2825768620872EC0004D1D38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825768520872EC0004D1D38 /* main.m */; };
-		282576902087384E004D1D38 /* AVPlayerPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825768F2087384E004D1D38 /* AVPlayerPracticeViewController.m */; };
-		2825769320875C3B004D1D38 /* FFAVPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825769220875C3B004D1D38 /* FFAVPlayerManager.m */; };
+		28D35EAA2089994700229299 /* FFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EA92089994700229299 /* FFPlayerView.m */; };
+		28D35EAD2089995900229299 /* FFPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EAC2089995900229299 /* FFPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +29,10 @@
 		2825768420872EC0004D1D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2825768520872EC0004D1D38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2825768D208730B5004D1D38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		2825768E2087384E004D1D38 /* AVPlayerPracticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerPracticeViewController.h; sourceTree = "<group>"; };
-		2825768F2087384E004D1D38 /* AVPlayerPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerPracticeViewController.m; sourceTree = "<group>"; };
-		2825769120875C3B004D1D38 /* FFAVPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFAVPlayerManager.h; sourceTree = "<group>"; };
-		2825769220875C3B004D1D38 /* FFAVPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFAVPlayerManager.m; sourceTree = "<group>"; };
+		28D35EA82089994700229299 /* FFPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerView.h; sourceTree = "<group>"; };
+		28D35EA92089994700229299 /* FFPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerView.m; sourceTree = "<group>"; };
+		28D35EAB2089995900229299 /* FFPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerViewController.h; sourceTree = "<group>"; };
+		28D35EAC2089995900229299 /* FFPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +70,7 @@
 				2825767720872EC0004D1D38 /* AppDelegate.m */,
 				2825767920872EC0004D1D38 /* ViewController.h */,
 				2825767A20872EC0004D1D38 /* ViewController.m */,
-				2825768E2087384E004D1D38 /* AVPlayerPracticeViewController.h */,
-				2825768F2087384E004D1D38 /* AVPlayerPracticeViewController.m */,
-				2825769120875C3B004D1D38 /* FFAVPlayerManager.h */,
-				2825769220875C3B004D1D38 /* FFAVPlayerManager.m */,
+				28D35EA72089990700229299 /* Player */,
 				2825767C20872EC0004D1D38 /* Main.storyboard */,
 				2825767F20872EC0004D1D38 /* Assets.xcassets */,
 				2825768120872EC0004D1D38 /* LaunchScreen.storyboard */,
@@ -89,6 +86,17 @@
 				2825768D208730B5004D1D38 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28D35EA72089990700229299 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				28D35EAB2089995900229299 /* FFPlayerViewController.h */,
+				28D35EAC2089995900229299 /* FFPlayerViewController.m */,
+				28D35EA82089994700229299 /* FFPlayerView.h */,
+				28D35EA92089994700229299 /* FFPlayerView.m */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,8 +172,8 @@
 			files = (
 				2825767B20872EC0004D1D38 /* ViewController.m in Sources */,
 				2825768620872EC0004D1D38 /* main.m in Sources */,
-				2825769320875C3B004D1D38 /* FFAVPlayerManager.m in Sources */,
-				282576902087384E004D1D38 /* AVPlayerPracticeViewController.m in Sources */,
+				28D35EAA2089994700229299 /* FFPlayerView.m in Sources */,
+				28D35EAD2089995900229299 /* FFPlayerViewController.m in Sources */,
 				2825767820872EC0004D1D38 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,9 +6,8 @@
 //  Copyright © 2018年 cts. All rights reserved.
 //
 
-#import "ViewController.h" 
-#import <AVFoundation/AVFoundation.h>
-#import "AVPlayerPracticeViewController.h"
+#import "ViewController.h"
+#import "FFPlayerViewController.h"
 
 
 @interface ViewController ()
@@ -21,10 +20,12 @@
     [super viewDidLoad];
     
 }
-- (IBAction)AVPlayerPractice:(UIButton *)sender {
-    AVPlayerPracticeViewController *playerPractice = [[AVPlayerPracticeViewController alloc] init];
+- (IBAction)AVPlayerPractice:(UIButton *)sender { 
+    FFPlayerViewController *playerPractice = [[FFPlayerViewController alloc] init];
     [self.navigationController pushViewController:playerPractice animated:YES];
 }
+
+
 
 
 @end
