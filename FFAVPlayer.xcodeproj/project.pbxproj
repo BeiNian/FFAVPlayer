@@ -13,6 +13,25 @@
 		2825768020872EC0004D1D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2825767F20872EC0004D1D38 /* Assets.xcassets */; };
 		2825768320872EC0004D1D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2825768120872EC0004D1D38 /* LaunchScreen.storyboard */; };
 		2825768620872EC0004D1D38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825768520872EC0004D1D38 /* main.m */; };
+		284A053A2094445900AC7421 /* UIImage+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A05392094445900AC7421 /* UIImage+Format.m */; };
+		284A055020947F1A00AC7421 /* SelPlayerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A054D20947F1900AC7421 /* SelPlayerConfiguration.m */; };
+		284A055820947F3000AC7421 /* SelVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055420947F2F00AC7421 /* SelVideoPlayer.m */; };
+		284A055920947F3000AC7421 /* SelVideoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055620947F2F00AC7421 /* SelVideoSlider.m */; };
+		284A055A20947F3000AC7421 /* SelPlaybackControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055720947F3000AC7421 /* SelPlaybackControls.m */; };
+		284A057520947F4F00AC7421 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055D20947F4F00AC7421 /* MASCompositeConstraint.m */; };
+		284A057620947F4F00AC7421 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056020947F4F00AC7421 /* MASConstraint.m */; };
+		284A057720947F4F00AC7421 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056220947F4F00AC7421 /* MASConstraintMaker.m */; };
+		284A057820947F4F00AC7421 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056420947F4F00AC7421 /* MASLayoutConstraint.m */; };
+		284A057920947F4F00AC7421 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056820947F4F00AC7421 /* MASViewAttribute.m */; };
+		284A057A20947F4F00AC7421 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056A20947F4F00AC7421 /* MASViewConstraint.m */; };
+		284A057B20947F4F00AC7421 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056C20947F4F00AC7421 /* NSArray+MASAdditions.m */; };
+		284A057C20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056F20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		284A057D20947F4F00AC7421 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A057120947F4F00AC7421 /* View+MASAdditions.m */; };
+		284A057E20947F4F00AC7421 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A057420947F4F00AC7421 /* ViewController+MASAdditions.m */; };
+		284A058120947FC600AC7421 /* UIViewController+PlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A057F20947FC600AC7421 /* UIViewController+PlayerRotation.m */; };
+		284A05842094842F00AC7421 /* FFPlayerControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A05832094842F00AC7421 /* FFPlayerControlsView.m */; };
+		284A05872094844400AC7421 /* FFPlayerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A05862094844400AC7421 /* FFPlayerConfiguration.m */; };
+		284A058A209485AB00AC7421 /* FFVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A0589209485AB00AC7421 /* FFVideoPlayerView.m */; };
 		28D35EAA2089994700229299 /* FFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EA92089994700229299 /* FFPlayerView.m */; };
 		28D35EAD2089995900229299 /* FFPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EAC2089995900229299 /* FFPlayerViewController.m */; };
 /* End PBXBuildFile section */
@@ -29,6 +48,49 @@
 		2825768420872EC0004D1D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2825768520872EC0004D1D38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2825768D208730B5004D1D38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		284A05382094445900AC7421 /* UIImage+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Format.h"; sourceTree = "<group>"; };
+		284A05392094445900AC7421 /* UIImage+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Format.m"; sourceTree = "<group>"; };
+		284A054C20947F1900AC7421 /* SelPlayerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelPlayerConfiguration.h; sourceTree = "<group>"; };
+		284A054D20947F1900AC7421 /* SelPlayerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelPlayerConfiguration.m; sourceTree = "<group>"; };
+		284A055220947F2F00AC7421 /* SelPlaybackControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelPlaybackControls.h; sourceTree = "<group>"; };
+		284A055320947F2F00AC7421 /* SelVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelVideoPlayer.h; sourceTree = "<group>"; };
+		284A055420947F2F00AC7421 /* SelVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelVideoPlayer.m; sourceTree = "<group>"; };
+		284A055520947F2F00AC7421 /* SelVideoSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelVideoSlider.h; sourceTree = "<group>"; };
+		284A055620947F2F00AC7421 /* SelVideoSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelVideoSlider.m; sourceTree = "<group>"; };
+		284A055720947F3000AC7421 /* SelPlaybackControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelPlaybackControls.m; sourceTree = "<group>"; };
+		284A055C20947F4F00AC7421 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		284A055D20947F4F00AC7421 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		284A055E20947F4F00AC7421 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		284A055F20947F4F00AC7421 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		284A056020947F4F00AC7421 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		284A056120947F4F00AC7421 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		284A056220947F4F00AC7421 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		284A056320947F4F00AC7421 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		284A056420947F4F00AC7421 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		284A056520947F4F00AC7421 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		284A056620947F4F00AC7421 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		284A056720947F4F00AC7421 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		284A056820947F4F00AC7421 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		284A056920947F4F00AC7421 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		284A056A20947F4F00AC7421 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		284A056B20947F4F00AC7421 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		284A056C20947F4F00AC7421 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		284A056D20947F4F00AC7421 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		284A056E20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		284A056F20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		284A057020947F4F00AC7421 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		284A057120947F4F00AC7421 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		284A057220947F4F00AC7421 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		284A057320947F4F00AC7421 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		284A057420947F4F00AC7421 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		284A057F20947FC600AC7421 /* UIViewController+PlayerRotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PlayerRotation.m"; sourceTree = "<group>"; };
+		284A058020947FC600AC7421 /* UIViewController+PlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PlayerRotation.h"; sourceTree = "<group>"; };
+		284A05822094842F00AC7421 /* FFPlayerControlsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerControlsView.h; sourceTree = "<group>"; };
+		284A05832094842F00AC7421 /* FFPlayerControlsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerControlsView.m; sourceTree = "<group>"; };
+		284A05852094844400AC7421 /* FFPlayerConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerConfiguration.h; sourceTree = "<group>"; };
+		284A05862094844400AC7421 /* FFPlayerConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerConfiguration.m; sourceTree = "<group>"; };
+		284A0588209485AB00AC7421 /* FFVideoPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFVideoPlayerView.h; sourceTree = "<group>"; };
+		284A0589209485AB00AC7421 /* FFVideoPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFVideoPlayerView.m; sourceTree = "<group>"; };
 		28D35EA82089994700229299 /* FFPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerView.h; sourceTree = "<group>"; };
 		28D35EA92089994700229299 /* FFPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerView.m; sourceTree = "<group>"; };
 		28D35EAB2089995900229299 /* FFPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerViewController.h; sourceTree = "<group>"; };
@@ -70,8 +132,12 @@
 				2825767720872EC0004D1D38 /* AppDelegate.m */,
 				2825767920872EC0004D1D38 /* ViewController.h */,
 				2825767A20872EC0004D1D38 /* ViewController.m */,
+				284A05382094445900AC7421 /* UIImage+Format.h */,
+				284A05392094445900AC7421 /* UIImage+Format.m */,
+				284A054B20947F1900AC7421 /* Configs */,
 				28D35EA72089990700229299 /* Player */,
 				2825767C20872EC0004D1D38 /* Main.storyboard */,
+				284A055B20947F4F00AC7421 /* Masonry */,
 				2825767F20872EC0004D1D38 /* Assets.xcassets */,
 				2825768120872EC0004D1D38 /* LaunchScreen.storyboard */,
 				2825768420872EC0004D1D38 /* Info.plist */,
@@ -88,11 +154,66 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		284A054B20947F1900AC7421 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				284A055220947F2F00AC7421 /* SelPlaybackControls.h */,
+				284A055720947F3000AC7421 /* SelPlaybackControls.m */,
+				284A055320947F2F00AC7421 /* SelVideoPlayer.h */,
+				284A055420947F2F00AC7421 /* SelVideoPlayer.m */,
+				284A055520947F2F00AC7421 /* SelVideoSlider.h */,
+				284A055620947F2F00AC7421 /* SelVideoSlider.m */,
+				284A054C20947F1900AC7421 /* SelPlayerConfiguration.h */,
+				284A054D20947F1900AC7421 /* SelPlayerConfiguration.m */,
+				284A058020947FC600AC7421 /* UIViewController+PlayerRotation.h */,
+				284A057F20947FC600AC7421 /* UIViewController+PlayerRotation.m */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		284A055B20947F4F00AC7421 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				284A055C20947F4F00AC7421 /* MASCompositeConstraint.h */,
+				284A055D20947F4F00AC7421 /* MASCompositeConstraint.m */,
+				284A055E20947F4F00AC7421 /* MASConstraint+Private.h */,
+				284A055F20947F4F00AC7421 /* MASConstraint.h */,
+				284A056020947F4F00AC7421 /* MASConstraint.m */,
+				284A056120947F4F00AC7421 /* MASConstraintMaker.h */,
+				284A056220947F4F00AC7421 /* MASConstraintMaker.m */,
+				284A056320947F4F00AC7421 /* MASLayoutConstraint.h */,
+				284A056420947F4F00AC7421 /* MASLayoutConstraint.m */,
+				284A056520947F4F00AC7421 /* Masonry.h */,
+				284A056620947F4F00AC7421 /* MASUtilities.h */,
+				284A056720947F4F00AC7421 /* MASViewAttribute.h */,
+				284A056820947F4F00AC7421 /* MASViewAttribute.m */,
+				284A056920947F4F00AC7421 /* MASViewConstraint.h */,
+				284A056A20947F4F00AC7421 /* MASViewConstraint.m */,
+				284A056B20947F4F00AC7421 /* NSArray+MASAdditions.h */,
+				284A056C20947F4F00AC7421 /* NSArray+MASAdditions.m */,
+				284A056D20947F4F00AC7421 /* NSArray+MASShorthandAdditions.h */,
+				284A056E20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				284A056F20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				284A057020947F4F00AC7421 /* View+MASAdditions.h */,
+				284A057120947F4F00AC7421 /* View+MASAdditions.m */,
+				284A057220947F4F00AC7421 /* View+MASShorthandAdditions.h */,
+				284A057320947F4F00AC7421 /* ViewController+MASAdditions.h */,
+				284A057420947F4F00AC7421 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
 		28D35EA72089990700229299 /* Player */ = {
 			isa = PBXGroup;
 			children = (
 				28D35EAB2089995900229299 /* FFPlayerViewController.h */,
 				28D35EAC2089995900229299 /* FFPlayerViewController.m */,
+				284A05852094844400AC7421 /* FFPlayerConfiguration.h */,
+				284A05862094844400AC7421 /* FFPlayerConfiguration.m */,
+				284A05822094842F00AC7421 /* FFPlayerControlsView.h */,
+				284A05832094842F00AC7421 /* FFPlayerControlsView.m */,
+				284A0588209485AB00AC7421 /* FFVideoPlayerView.h */,
+				284A0589209485AB00AC7421 /* FFVideoPlayerView.m */,
 				28D35EA82089994700229299 /* FFPlayerView.h */,
 				28D35EA92089994700229299 /* FFPlayerView.m */,
 			);
@@ -170,11 +291,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284A057D20947F4F00AC7421 /* View+MASAdditions.m in Sources */,
+				284A058A209485AB00AC7421 /* FFVideoPlayerView.m in Sources */,
 				2825767B20872EC0004D1D38 /* ViewController.m in Sources */,
+				284A055A20947F3000AC7421 /* SelPlaybackControls.m in Sources */,
 				2825768620872EC0004D1D38 /* main.m in Sources */,
+				284A055920947F3000AC7421 /* SelVideoSlider.m in Sources */,
+				284A053A2094445900AC7421 /* UIImage+Format.m in Sources */,
+				284A057E20947F4F00AC7421 /* ViewController+MASAdditions.m in Sources */,
+				284A057920947F4F00AC7421 /* MASViewAttribute.m in Sources */,
+				284A057520947F4F00AC7421 /* MASCompositeConstraint.m in Sources */,
+				284A055820947F3000AC7421 /* SelVideoPlayer.m in Sources */,
+				284A055020947F1A00AC7421 /* SelPlayerConfiguration.m in Sources */,
+				284A057720947F4F00AC7421 /* MASConstraintMaker.m in Sources */,
+				284A057620947F4F00AC7421 /* MASConstraint.m in Sources */,
+				284A057C20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				284A057820947F4F00AC7421 /* MASLayoutConstraint.m in Sources */,
+				284A057B20947F4F00AC7421 /* NSArray+MASAdditions.m in Sources */,
+				284A058120947FC600AC7421 /* UIViewController+PlayerRotation.m in Sources */,
 				28D35EAA2089994700229299 /* FFPlayerView.m in Sources */,
 				28D35EAD2089995900229299 /* FFPlayerViewController.m in Sources */,
+				284A05842094842F00AC7421 /* FFPlayerControlsView.m in Sources */,
 				2825767820872EC0004D1D38 /* AppDelegate.m in Sources */,
+				284A057A20947F4F00AC7421 /* MASViewConstraint.m in Sources */,
+				284A05872094844400AC7421 /* FFPlayerConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UKS39HDUB;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
 				INFOPLIST_FILE = FFAVPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -325,6 +466,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UKS39HDUB;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "";
 				INFOPLIST_FILE = FFAVPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

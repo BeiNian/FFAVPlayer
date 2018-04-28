@@ -21,15 +21,29 @@ typedef enum  {
 @property (nonatomic, strong) AVPlayerItem *playerItem;
 @property (nonatomic, strong) AVPlayerLayer *playerLayer;
 @property (nonatomic ,strong)  id timeObser;
+/** 视频总长度 */
 @property (nonatomic ,assign) float playLength;
-//Gesture
+
+/** 是否处于全屏状态 */
+@property (nonatomic, assign) BOOL isFullScreen;
+/** 非全屏状态下播放器 superview */
+@property (nonatomic, strong) UIView *originalSuperview;
+/** 非全屏状态下播放器 frame */
+@property (nonatomic, assign) CGRect originalRect;
+
+#pragma mark -
+@property (nonatomic ,strong) UIPanGestureRecognizer *panGesture;
+/** 亮度图片 */
+@property (nonatomic, nullable, strong) UIImageView *brightnessImgView;
+/** 系统音量提示框 */
+@property (nonatomic ,weak) UISlider *volumeSlider;
+/** 音量操作 */
+@property (nonatomic ,strong) MPVolumeView *volumeView;
+//Gesture 屏幕操作要改变的内容
 @property (nonatomic ,assign) Change changeKind;
+/** 手势开始触摸的点 */
 @property (nonatomic ,assign) CGPoint lastPoint;
 
-@property (nonatomic ,weak) UISlider *volumeSlider;
-@property (nonatomic ,strong) MPVolumeView *volumeView;
-@property (nonatomic ,strong) UIPanGestureRecognizer *panGesture;
-@property (nonatomic, nullable, strong) UIImageView *brightnessImgView;
 
 @end
 
@@ -43,9 +57,8 @@ typedef enum  {
         [self setUpPlayer];
         [self addPlayerKVO];
         [self addProgressObserver];
-        
-        [self addSwipeView];
-        
+        [self addNotification];
+        [self addSwipeView]; 
     }
     return self;
 }
@@ -57,14 +70,91 @@ typedef enum  {
 }
 
 - (void)setUpPlayer {
-    NSURL *url = [NSURL  URLWithString:_playerUrl];
+    NSURL *url = [NSURL URLWithString:_playerUrl];
     _playerItem = [AVPlayerItem playerItemWithURL:url];
     _player = [AVPlayer playerWithPlayerItem:_playerItem];
     _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_player];
     [self.layer addSublayer:_playerLayer];
     [self addSubview:self.brightnessImgView];
 }
-
+- (void)addNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+/** 屏幕翻转监听事件 */
+- (void)orientationChanged:(NSNotification *)notify
+{
+    [self orientationAspect];
+}
+/** 根据屏幕旋转方向改变当前视频屏幕状态 */
+- (void)orientationAspect
+{
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    if (orientation == UIDeviceOrientationLandscapeLeft){
+        if (!_isFullScreen){
+            [self _videoZoomInWithDirection:UIInterfaceOrientationLandscapeRight];
+        }
+    }
+    else if (orientation == UIDeviceOrientationLandscapeRight){
+        if (!_isFullScreen){
+            [self _videoZoomInWithDirection:UIInterfaceOrientationLandscapeLeft];
+        }
+    }
+    else if(orientation == UIDeviceOrientationPortrait){
+        if (_isFullScreen){
+            [self _videoZoomOut];
+        }
+    }
+}
+/** 视频退出全屏幕 */
+- (void)_videoZoomOut
+{
+    //退出全屏时强制取消隐藏状态栏
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:NO];
+    [UIView animateWithDuration:duration animations:^{
+        self.transform = CGAffineTransformMakeRotation(0);
+    }completion:^(BOOL finished) {
+        
+    }];
+    self.frame = _originalRect;
+    [_originalSuperview addSubview:self];
+    
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+    
+    self.isFullScreen = NO;
+}
+/**
+ 视频放大全屏幕
+ @param orientation 旋转方向
+ */
+- (void)_videoZoomInWithDirection:(UIInterfaceOrientation)orientation
+{
+    _originalSuperview = self.superview;
+    _originalRect = self.frame;
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow addSubview:self];
+    
+    
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+    [[UIApplication sharedApplication] setStatusBarOrientation:orientation animated:NO];
+    [UIView animateWithDuration:duration animations:^{
+        if (orientation == UIInterfaceOrientationLandscapeLeft){
+            self.transform = CGAffineTransformMakeRotation(-M_PI/2);
+        }else if (orientation == UIInterfaceOrientationLandscapeRight) {
+            self.transform = CGAffineTransformMakeRotation(M_PI/2);
+        }
+    }completion:^(BOOL finished) {
+        
+    }];
+    
+    self.frame = keyWindow.bounds;
+//    [self setNeedsLayout];
+//    [self layoutIfNeeded];
+    
+    self.isFullScreen = YES;
+}
 #pragma mark - KVO
 - (void)addPlayerKVO {
     //监控状态属性，注意AVPlayer也有一个status属性，通过监控它的status也可以获得播放状态
@@ -180,7 +270,6 @@ typedef enum  {
         } break;
         case  UIGestureRecognizerStateChanged: {
             [self getChangeKindValue:[gesture locationInView:self]];
-//            NSLog(@"%@",NSStringFromCGPoint([gesture locationInView:self]));
         } break;
         case UIGestureRecognizerStateEnded: {
             if (_changeKind == ChangeCMTime) {
@@ -308,6 +397,7 @@ typedef enum  {
 }
 - (void)upperVolume {
      NSLog(@"声音增加");
+     NSLog(@"self.volumeView.frame = %@",NSStringFromCGRect(self.volumeView.frame));
     if (self.volumeSlider.value <= 1.0) {
         self.volumeSlider.value =  self.volumeSlider.value + 0.1 ;
     }
@@ -324,6 +414,11 @@ typedef enum  {
     if (_volumeView == nil) {
         _volumeView = [[MPVolumeView alloc] init];
         _volumeView.hidden = YES;
+        _volumeView.showsRouteButton = YES;
+        //默认YES，这里为了突出，故意设置一遍
+        _volumeView.showsVolumeSlider = YES;
+        //通过设置frame来达到隐藏音量滑动条
+//        [_volumeView setFrame:CGRectMake(100, 100, 10, 10)];
         [self addSubview:_volumeView];
     }
     return _volumeView;
