@@ -14,10 +14,6 @@
 		2825768320872EC0004D1D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2825768120872EC0004D1D38 /* LaunchScreen.storyboard */; };
 		2825768620872EC0004D1D38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2825768520872EC0004D1D38 /* main.m */; };
 		284A053A2094445900AC7421 /* UIImage+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A05392094445900AC7421 /* UIImage+Format.m */; };
-		284A055020947F1A00AC7421 /* SelPlayerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A054D20947F1900AC7421 /* SelPlayerConfiguration.m */; };
-		284A055820947F3000AC7421 /* SelVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055420947F2F00AC7421 /* SelVideoPlayer.m */; };
-		284A055920947F3000AC7421 /* SelVideoSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055620947F2F00AC7421 /* SelVideoSlider.m */; };
-		284A055A20947F3000AC7421 /* SelPlaybackControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055720947F3000AC7421 /* SelPlaybackControls.m */; };
 		284A057520947F4F00AC7421 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A055D20947F4F00AC7421 /* MASCompositeConstraint.m */; };
 		284A057620947F4F00AC7421 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056020947F4F00AC7421 /* MASConstraint.m */; };
 		284A057720947F4F00AC7421 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A056220947F4F00AC7421 /* MASConstraintMaker.m */; };
@@ -32,6 +28,9 @@
 		284A05842094842F00AC7421 /* FFPlayerControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A05832094842F00AC7421 /* FFPlayerControlsView.m */; };
 		284A05872094844400AC7421 /* FFPlayerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A05862094844400AC7421 /* FFPlayerConfiguration.m */; };
 		284A058A209485AB00AC7421 /* FFVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 284A0589209485AB00AC7421 /* FFVideoPlayerView.m */; };
+		28638B832099A8AF0047F3FF /* CKPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28638B822099A8AF0047F3FF /* CKPlayerView.m */; };
+		28638B862099A8F40047F3FF /* CKPlayerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 28638B852099A8F40047F3FF /* CKPlayerConfiguration.m */; };
+		28638B892099A9610047F3FF /* CKPlayerControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28638B882099A9610047F3FF /* CKPlayerControlsView.m */; };
 		28D35EAA2089994700229299 /* FFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EA92089994700229299 /* FFPlayerView.m */; };
 		28D35EAD2089995900229299 /* FFPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EAC2089995900229299 /* FFPlayerViewController.m */; };
 /* End PBXBuildFile section */
@@ -50,14 +49,6 @@
 		2825768D208730B5004D1D38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		284A05382094445900AC7421 /* UIImage+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Format.h"; sourceTree = "<group>"; };
 		284A05392094445900AC7421 /* UIImage+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Format.m"; sourceTree = "<group>"; };
-		284A054C20947F1900AC7421 /* SelPlayerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelPlayerConfiguration.h; sourceTree = "<group>"; };
-		284A054D20947F1900AC7421 /* SelPlayerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelPlayerConfiguration.m; sourceTree = "<group>"; };
-		284A055220947F2F00AC7421 /* SelPlaybackControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelPlaybackControls.h; sourceTree = "<group>"; };
-		284A055320947F2F00AC7421 /* SelVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelVideoPlayer.h; sourceTree = "<group>"; };
-		284A055420947F2F00AC7421 /* SelVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelVideoPlayer.m; sourceTree = "<group>"; };
-		284A055520947F2F00AC7421 /* SelVideoSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelVideoSlider.h; sourceTree = "<group>"; };
-		284A055620947F2F00AC7421 /* SelVideoSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelVideoSlider.m; sourceTree = "<group>"; };
-		284A055720947F3000AC7421 /* SelPlaybackControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelPlaybackControls.m; sourceTree = "<group>"; };
 		284A055C20947F4F00AC7421 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		284A055D20947F4F00AC7421 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		284A055E20947F4F00AC7421 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -91,6 +82,12 @@
 		284A05862094844400AC7421 /* FFPlayerConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerConfiguration.m; sourceTree = "<group>"; };
 		284A0588209485AB00AC7421 /* FFVideoPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFVideoPlayerView.h; sourceTree = "<group>"; };
 		284A0589209485AB00AC7421 /* FFVideoPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFVideoPlayerView.m; sourceTree = "<group>"; };
+		28638B812099A8AF0047F3FF /* CKPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKPlayerView.h; sourceTree = "<group>"; };
+		28638B822099A8AF0047F3FF /* CKPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKPlayerView.m; sourceTree = "<group>"; };
+		28638B842099A8F40047F3FF /* CKPlayerConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKPlayerConfiguration.h; sourceTree = "<group>"; };
+		28638B852099A8F40047F3FF /* CKPlayerConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKPlayerConfiguration.m; sourceTree = "<group>"; };
+		28638B872099A9610047F3FF /* CKPlayerControlsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKPlayerControlsView.h; sourceTree = "<group>"; };
+		28638B882099A9610047F3FF /* CKPlayerControlsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKPlayerControlsView.m; sourceTree = "<group>"; };
 		28D35EA82089994700229299 /* FFPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerView.h; sourceTree = "<group>"; };
 		28D35EA92089994700229299 /* FFPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerView.m; sourceTree = "<group>"; };
 		28D35EAB2089995900229299 /* FFPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerViewController.h; sourceTree = "<group>"; };
@@ -134,6 +131,7 @@
 				2825767A20872EC0004D1D38 /* ViewController.m */,
 				284A05382094445900AC7421 /* UIImage+Format.h */,
 				284A05392094445900AC7421 /* UIImage+Format.m */,
+				28638B802099A8910047F3FF /* CKPlayer */,
 				284A054B20947F1900AC7421 /* Configs */,
 				28D35EA72089990700229299 /* Player */,
 				2825767C20872EC0004D1D38 /* Main.storyboard */,
@@ -157,14 +155,6 @@
 		284A054B20947F1900AC7421 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				284A055220947F2F00AC7421 /* SelPlaybackControls.h */,
-				284A055720947F3000AC7421 /* SelPlaybackControls.m */,
-				284A055320947F2F00AC7421 /* SelVideoPlayer.h */,
-				284A055420947F2F00AC7421 /* SelVideoPlayer.m */,
-				284A055520947F2F00AC7421 /* SelVideoSlider.h */,
-				284A055620947F2F00AC7421 /* SelVideoSlider.m */,
-				284A054C20947F1900AC7421 /* SelPlayerConfiguration.h */,
-				284A054D20947F1900AC7421 /* SelPlayerConfiguration.m */,
 				284A058020947FC600AC7421 /* UIViewController+PlayerRotation.h */,
 				284A057F20947FC600AC7421 /* UIViewController+PlayerRotation.m */,
 			);
@@ -201,6 +191,19 @@
 				284A057420947F4F00AC7421 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		28638B802099A8910047F3FF /* CKPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				28638B842099A8F40047F3FF /* CKPlayerConfiguration.h */,
+				28638B852099A8F40047F3FF /* CKPlayerConfiguration.m */,
+				28638B812099A8AF0047F3FF /* CKPlayerView.h */,
+				28638B822099A8AF0047F3FF /* CKPlayerView.m */,
+				28638B872099A9610047F3FF /* CKPlayerControlsView.h */,
+				28638B882099A9610047F3FF /* CKPlayerControlsView.m */,
+			);
+			path = CKPlayer;
 			sourceTree = "<group>";
 		};
 		28D35EA72089990700229299 /* Player */ = {
@@ -294,15 +297,13 @@
 				284A057D20947F4F00AC7421 /* View+MASAdditions.m in Sources */,
 				284A058A209485AB00AC7421 /* FFVideoPlayerView.m in Sources */,
 				2825767B20872EC0004D1D38 /* ViewController.m in Sources */,
-				284A055A20947F3000AC7421 /* SelPlaybackControls.m in Sources */,
 				2825768620872EC0004D1D38 /* main.m in Sources */,
-				284A055920947F3000AC7421 /* SelVideoSlider.m in Sources */,
+				28638B892099A9610047F3FF /* CKPlayerControlsView.m in Sources */,
 				284A053A2094445900AC7421 /* UIImage+Format.m in Sources */,
 				284A057E20947F4F00AC7421 /* ViewController+MASAdditions.m in Sources */,
 				284A057920947F4F00AC7421 /* MASViewAttribute.m in Sources */,
+				28638B862099A8F40047F3FF /* CKPlayerConfiguration.m in Sources */,
 				284A057520947F4F00AC7421 /* MASCompositeConstraint.m in Sources */,
-				284A055820947F3000AC7421 /* SelVideoPlayer.m in Sources */,
-				284A055020947F1A00AC7421 /* SelPlayerConfiguration.m in Sources */,
 				284A057720947F4F00AC7421 /* MASConstraintMaker.m in Sources */,
 				284A057620947F4F00AC7421 /* MASConstraint.m in Sources */,
 				284A057C20947F4F00AC7421 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -310,6 +311,7 @@
 				284A057B20947F4F00AC7421 /* NSArray+MASAdditions.m in Sources */,
 				284A058120947FC600AC7421 /* UIViewController+PlayerRotation.m in Sources */,
 				28D35EAA2089994700229299 /* FFPlayerView.m in Sources */,
+				28638B832099A8AF0047F3FF /* CKPlayerView.m in Sources */,
 				28D35EAD2089995900229299 /* FFPlayerViewController.m in Sources */,
 				284A05842094842F00AC7421 /* FFPlayerControlsView.m in Sources */,
 				2825767820872EC0004D1D38 /* AppDelegate.m in Sources */,

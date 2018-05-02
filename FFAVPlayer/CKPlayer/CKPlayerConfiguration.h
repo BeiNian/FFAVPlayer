@@ -1,21 +1,27 @@
 //
-//  FFPlayerConfiguration.h
+//  CKPlayerConfiguration.h
 //  FFAVPlayer
 //
-//  Created by cts on 2018/4/28.
+//  Created by cts on 2018/5/2.
 //  Copyright © 2018年 cts. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, Change) {
-    ChangeNone,
-    ChangeVoice,
-    ChangeLigth,
-    ChangeCMTime
+typedef NS_ENUM(NSUInteger, CKPlayerChange) {
+    CKPlayerChangeNone,
+    CKPlayerChangeVoice,
+    CKPlayerChangeLigth,
+    CKPlayerChangeCMTime
 };
 
-@interface FFPlayerConfiguration : NSObject
+typedef NS_ENUM(NSUInteger, CKChangeCMTime) {
+    CKPlayerUpperCMTime,
+    CKPlayerMineCMTime,
+};
+
+
+@interface CKPlayerConfiguration : NSObject
 /** 视频数据源 */
 @property (nonatomic, strong) NSURL *sourceUrl;
 /** 是否自动播放 */
@@ -30,5 +36,7 @@ typedef NS_ENUM(NSUInteger, Change) {
 @property (nonatomic, assign) BOOL shouldAutorotate;
 /** 隐藏控制面板延时时间 缺省5s */
 @property (nonatomic, assign) NSTimeInterval hideControlsInterval;
+/** 是否显示控制面板 */
+@property (nonatomic, assign) BOOL showControls;
 
 @end

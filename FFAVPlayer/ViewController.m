@@ -9,13 +9,10 @@
 #import "ViewController.h"
 #import "FFPlayerViewController.h"
 #import "UIImage+Format.h"
-#import "SelPlayerConfiguration.h"
-#import "SelVideoPlayer.h"
 
 
 @interface ViewController ()
-
-@property (nonatomic, strong) SelVideoPlayer *player;
+ 
 @end
 
 @implementation ViewController

@@ -39,7 +39,7 @@ typedef enum  {
 @property (nonatomic ,weak) UISlider *volumeSlider;
 /** 音量操作 */
 @property (nonatomic ,strong) MPVolumeView *volumeView;
-//Gesture 屏幕操作要改变的内容
+// Gesture 屏幕操作要改变的内容
 @property (nonatomic ,assign) Change changeKind;
 /** 手势开始触摸的点 */
 @property (nonatomic ,assign) CGPoint lastPoint;
@@ -159,7 +159,7 @@ typedef enum  {
 - (void)addPlayerKVO {
     //监控状态属性，注意AVPlayer也有一个status属性，通过监控它的status也可以获得播放状态
     [_playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    //监控网络加载情况属性
+    //监控网络加载情况属性 缓冲时长
     [_playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
 }
 - (void)removePlayerKVO {

@@ -9,11 +9,12 @@
 #import "FFPlayerViewController.h"
 #import "FFPlayerView.h"
 #import "FFVideoPlayerView.h"
+#import "CKPlayerView.h"
 
 
 @interface FFPlayerViewController ()<FFPlayerViewDelegate>
 @property (nonatomic, nullable, strong) FFPlayerView *playerView;
-@property (nonatomic, nullable, strong) FFVideoPlayerView *player;
+@property (nonatomic, nullable, strong) CKPlayerView *player;
 
 @end
 
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    FFPlayerConfiguration *configuration = [[FFPlayerConfiguration alloc]init];
+    CKPlayerConfiguration *configuration = [[CKPlayerConfiguration alloc]init];
         configuration.shouldAutoPlay = YES;
         configuration.supportedDoubleTap = YES;
         configuration.shouldAutorotate = YES;
@@ -30,7 +31,7 @@
         configuration.sourceUrl = [NSURL URLWithString:@"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4"];
     
         CGFloat width = self.view.frame.size.width;
-        _player = [[FFVideoPlayerView alloc]initWithFrame:CGRectMake(0, 100, width, 300) configuration:configuration];
+        _player = [[CKPlayerView alloc]initWithFrame:CGRectMake(0, 100, width, 300) configuration:configuration];
         [self.view addSubview:_player];
     
     
