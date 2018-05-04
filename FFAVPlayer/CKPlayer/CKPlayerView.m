@@ -53,6 +53,7 @@
     }
     self.playerLayer = nil;
     self.player = nil;
+    NSLog(@"dealloc");
 }
 
 - (void)layoutSubviews{
@@ -124,10 +125,6 @@
         default:
             break;
     }
-  
-    
-    
-   
 }
 
 #pragma mark - 操作
@@ -135,29 +132,39 @@
     [self.player play];
 //    self.player.rate = 4; // 播放倍数
 }
-
+- (void)pauseVideo {
+    [self.player pause];
+}
 - (void)setIsFullScreen:(BOOL)isFullScreen {
     _isFullScreen = isFullScreen;
     self.playerControlsView.isFullScreen = isFullScreen;
+}
+- (void)activityShowing:(BOOL)isShow {
+    self.playerControlsView.isActivityShowing = isShow;
 }
 
 #pragma mark - 缓存较差时候
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSString*, id> *)change context:(nullable void *)context {
     if ([keyPath isEqualToString:@"status"]) {
         AVPlayerItemStatus status = _playerItem.status;
+        
         switch (status) {
             case AVPlayerItemStatusReadyToPlay: {
                 NSLog(@"AVPlayerItemStatusReadyToPlay");
                 NSLog(@"正在播放...，视频总长度:%.2f",CMTimeGetSeconds(_playerItem.duration));
                 self.playTotalDuration = CMTimeGetSeconds(_playerItem.duration);
+                [self activityShowing:YES];
             } break;
+                
             case AVPlayerItemStatusUnknown: {
                 NSLog(@"AVPlayerItemStatusUnknown");
             } break;
+                
             case AVPlayerItemStatusFailed: {
                 NSLog(@"AVPlayerItemStatusFailed");
                 NSLog(@"%@",_playerItem.error);
             } break;
+                
             default: break;
         }
     }
@@ -174,12 +181,18 @@
         // 当无缓冲视频数据时
         if (self.playerItem.playbackBufferEmpty) {
             NSLog(@"playbackBufferEmpty 无可播放视频缓存");
+            [self pauseVideo];
+            [self activityShowing:YES];
         }
     }
     else if ([keyPath isEqualToString:@"playbackLikelyToKeepUp"]) {
         // 当视频缓冲好时
         // 播放
-        NSLog(@"playbackLikelyToKeepUp 可播放视频缓存");
+        if (self.playerItem.playbackLikelyToKeepUp) {
+            [self playVideo];
+             NSLog(@"playbackLikelyToKeepUp 可播放视频缓存");
+            [self activityShowing:NO];
+        }
     }
 }
 /** 视频播放结束事件监听 */

@@ -12,8 +12,7 @@
 #import "CKPlayerView.h"
 
 
-@interface FFPlayerViewController ()<FFPlayerViewDelegate>
-@property (nonatomic, nullable, strong) FFPlayerView *playerView;
+@interface FFPlayerViewController ()  
 @property (nonatomic, nullable, strong) CKPlayerView *player;
 
 @end
@@ -32,27 +31,10 @@
     
         CGFloat width = self.view.frame.size.width;
         _player = [[CKPlayerView alloc]initWithFrame:CGRectMake(0, 100, width, 300) configuration:configuration];
-        [self.view addSubview:_player];
-    
-    
-    
-    
-//        NSString *path = @"http://static.tripbe.com/videofiles/20121214/9533522808.f4v.mp4";
-//        @autoreleasepool {
-//            _playerView = [[FFPlayerView alloc] initWithUrl:path delegate:self];
-//            _playerView.delegate = self;
-//            _playerView.frame = self.view.bounds;
-//            [self.view addSubview:_playerView];
-//        }
-    
+        [self.view addSubview:_player]; 
 }
 - (void)dealloc {
-    [_playerView stop];
-}
-#pragma mark - FFPlayerViewDelegate
-- (void)flushCurrentTime:(NSString *)timeString sliderValue:(float)sliderValue {
-    NSLog(@"🖨当前已经播放%@s.  sliderValue = %.2f",timeString,sliderValue);
-
+   
 }
 
 @end

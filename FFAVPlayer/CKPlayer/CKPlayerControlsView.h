@@ -20,12 +20,8 @@
 
 @interface CKPlayerControlsView : UIView
 @property (nonatomic, weak) id <CKPlayerControlsDelegate>delegate;
-@property (nonatomic, assign) BOOL isFullScreen;// 是否处于全屏状态
-
-@property (nonatomic, strong) UIButton *controlButton; // 控制按钮
-@property (nonatomic, strong) UILabel *playDuration; // 播放时间
-@property (nonatomic, strong) UILabel *playTotalDuration; // 播放总时长
-@property (nonatomic, strong) UIButton *fullScreenButton; // 全屏操作按钮
+@property (nonatomic, assign) BOOL isFullScreen; //是否处于全屏状态
+@property (nonatomic, assign) BOOL isActivityShowing; //加载指示器是否显示
 
 /**
  设置视频时间显示以及滑杆状态
@@ -34,4 +30,5 @@
  @param sliderValue 滑杆滑动值
  */
 - (void)setPlaybackControlsWithPlayTime:(NSInteger)playTime totalTime:(NSInteger)totalTime sliderValue:(CGFloat)sliderValue;
+
 @end

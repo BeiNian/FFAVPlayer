@@ -13,12 +13,19 @@
 
 
 @interface CKPlayerControlsView ()
+@property (nonatomic, strong) UIButton *controlButton; // 控制按钮
+@property (nonatomic, strong) UILabel *playDuration; // 播放时间
+@property (nonatomic, strong) UILabel *playTotalDuration; // 播放总时长
+@property (nonatomic, strong) UIButton *fullScreenButton; // 全屏操作按钮
 
 @property (nonatomic ,strong) UIPanGestureRecognizer *panGesture;
 @property (nonatomic ,weak) UISlider *volumeSlider;// 系统音量提示框
 @property (nonatomic ,strong) MPVolumeView *volumeView; // 音量操作
 @property (nonatomic ,assign) CKPlayerChange changeKind; // Gesture 屏幕操作要改变的内容
 @property (nonatomic ,assign) CGPoint lastPoint; // 开始时手势触摸的点
+
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView; //加载指示器
+
 
 
 @end
@@ -32,12 +39,45 @@
     if (self) {
         [self addSwipeView];
         [self setupBottomControlsViews];
+        [self addActivityIndicatorView];
     }
     return self;
 }
+
+#pragma mark - 指示器
+#pragma mark -----------------------------------------
+- (void)addActivityIndicatorView {
+    [self addSubview:self.activityIndicatorView];
+    [_activityIndicatorView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.mas_centerX);
+        make.centerY.mas_equalTo(self.mas_centerY); 
+        make.height.width.mas_equalTo(140);
+    }];
+    
+}
+- (UIActivityIndicatorView *)activityIndicatorView {
+    if (_activityIndicatorView == nil) {
+        _activityIndicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        
+    }
+    return _activityIndicatorView;
+}
+- (void)setIsActivityShowing:(BOOL)isActivityShowing {
+    _isActivityShowing = isActivityShowing;
+    if (isActivityShowing) {
+        self.activityIndicatorView.hidden = NO;
+        [self.activityIndicatorView startAnimating];
+    }else {
+        self.activityIndicatorView.hidden = YES;
+        [self.activityIndicatorView stopAnimating];
+    }
+}
+
+#pragma mark - 底部面板
+#pragma mark -----------------------------------------
 - (void)setIsFullScreen:(BOOL)isFullScreen {
     _isFullScreen = isFullScreen;
-   
+    
     if (!_fullScreenButton) {
         return;
     }
@@ -62,8 +102,6 @@
     self.playTotalDuration.text = [NSString stringWithFormat:@"%02zd:%02zd", durMin, durSec];
 }
 
-#pragma mark -----------------------------------------
-#pragma mark - 底部面板
 - (void)setupBottomControlsViews {
     [self addSubview:self.controlButton];
     [self addSubview:self.playDuration];
@@ -129,6 +167,7 @@
 }
 
 #pragma mark - 手势
+#pragma mark -----------------------------------------
 - (void)addSwipeView {
      UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(swipeAction:)];
     [self addGestureRecognizer:panGesture];
@@ -136,15 +175,16 @@
     [self addGestureRecognizer:tap];
     [tap requireGestureRecognizerToFail:panGesture];
 }
+
 - (void)tapAction:(UITapGestureRecognizer *)tap {
   
 }
 
 #pragma mak - 滑动操作
 - (void)swipeAction:(UISwipeGestureRecognizer *)gesture {
-//    if (!_isFullScreen) {
-//        return;
-//    }
+    if (!_isFullScreen) {
+        return;
+    }
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan: {
             _changeKind = CKPlayerChangeNone;
@@ -197,18 +237,18 @@
 - (void)changeForCMTime:(CGPoint) pointNow {
     float number = fabs(pointNow.x - _lastPoint.x);
     if (pointNow.x > _lastPoint.x && number > 10) {
-        NSLog(@"forwart to  changeTo  time:%f",number);
+//        NSLog(@"forwart to  changeTo  time:%f",number);
     } else if (pointNow.x < _lastPoint.x && number > 10) {
-        NSLog(@"back to  time:%f",number);
+//        NSLog(@"back to  time:%f",number);
     }
 }
 - (void)changeEndForCMTime:(CGPoint)pointNow {
     if (pointNow.x > _lastPoint.x ) {
-        NSLog(@"end for CMTime Upper");
+//        NSLog(@"end for CMTime Upper");
         float length = fabs(pointNow.x - _lastPoint.x);
         [self upperCMTime:length];
     } else {
-        NSLog(@"end for CMTime min");
+//        NSLog(@"end for CMTime min");
         float length = fabs(pointNow.x - _lastPoint.x);
         [self mineCMTime:length];
     }
@@ -269,7 +309,7 @@
 }
 - (void)upperVolume {
     NSLog(@"声音增加");
-    NSLog(@"self.volumeView.frame = %@",NSStringFromCGRect(self.volumeView.frame));
+//    NSLog(@"self.volumeView.frame = %@",NSStringFromCGRect(self.volumeView.frame));
     if (self.volumeSlider.value <= 1.0) {
         self.volumeSlider.value =  self.volumeSlider.value + 0.1 ;
     }
@@ -280,7 +320,7 @@
         self.volumeSlider.value =  self.volumeSlider.value - 0.1 ;
     }
 }
-#pragma mark - set & get
+
 - (MPVolumeView *)volumeView {
     
     if (_volumeView == nil) {

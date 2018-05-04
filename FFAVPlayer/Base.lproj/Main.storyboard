@@ -48,10 +48,23 @@
                                     <action selector="AVPlayerPractice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OKT-40-Tpe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXw-Cr-AZm">
+                                <rect key="frame" x="87" y="179" width="200" height="45"/>
+                                <state key="normal" title="视频录制"/>
+                                <connections>
+                                    <action selector="AVPlayerPractice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6aU-lL-nep"/>
+                                    <action selector="CaptureMovie:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQG-On-wKH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EXw-Cr-AZm" firstAttribute="height" secondItem="5TH-PY-c3M" secondAttribute="height" id="5ds-Ui-JNY"/>
+                            <constraint firstItem="5TH-PY-c3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GCg-lk-s16"/>
+                            <constraint firstItem="EXw-Cr-AZm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GbV-QS-iha"/>
                             <constraint firstItem="5TH-PY-c3M" firstAttribute="top" secondItem="Upd-0H-Ouf" secondAttribute="bottom" constant="50" id="Zgi-mA-yuj"/>
+                            <constraint firstItem="EXw-Cr-AZm" firstAttribute="width" secondItem="5TH-PY-c3M" secondAttribute="width" id="cuf-Js-EfE"/>
+                            <constraint firstItem="EXw-Cr-AZm" firstAttribute="top" secondItem="5TH-PY-c3M" secondAttribute="bottom" constant="20" id="r6U-HZ-hsy"/>
                             <constraint firstItem="5TH-PY-c3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sE2-6C-rZy"/>
                         </constraints>
                     </view>

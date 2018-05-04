@@ -31,6 +31,7 @@
 		28638B832099A8AF0047F3FF /* CKPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28638B822099A8AF0047F3FF /* CKPlayerView.m */; };
 		28638B862099A8F40047F3FF /* CKPlayerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 28638B852099A8F40047F3FF /* CKPlayerConfiguration.m */; };
 		28638B892099A9610047F3FF /* CKPlayerControlsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28638B882099A9610047F3FF /* CKPlayerControlsView.m */; };
+		28638B8D209AB7610047F3FF /* CKCaptureMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28638B8C209AB7610047F3FF /* CKCaptureMovieViewController.m */; };
 		28D35EAA2089994700229299 /* FFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EA92089994700229299 /* FFPlayerView.m */; };
 		28D35EAD2089995900229299 /* FFPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D35EAC2089995900229299 /* FFPlayerViewController.m */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		28638B852099A8F40047F3FF /* CKPlayerConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKPlayerConfiguration.m; sourceTree = "<group>"; };
 		28638B872099A9610047F3FF /* CKPlayerControlsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKPlayerControlsView.h; sourceTree = "<group>"; };
 		28638B882099A9610047F3FF /* CKPlayerControlsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKPlayerControlsView.m; sourceTree = "<group>"; };
+		28638B8B209AB7610047F3FF /* CKCaptureMovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKCaptureMovieViewController.h; sourceTree = "<group>"; };
+		28638B8C209AB7610047F3FF /* CKCaptureMovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKCaptureMovieViewController.m; sourceTree = "<group>"; };
 		28D35EA82089994700229299 /* FFPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerView.h; sourceTree = "<group>"; };
 		28D35EA92089994700229299 /* FFPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPlayerView.m; sourceTree = "<group>"; };
 		28D35EAB2089995900229299 /* FFPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPlayerViewController.h; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 				2825767A20872EC0004D1D38 /* ViewController.m */,
 				284A05382094445900AC7421 /* UIImage+Format.h */,
 				284A05392094445900AC7421 /* UIImage+Format.m */,
+				28638B8A209AB7470047F3FF /* CKCaptureMovie */,
 				28638B802099A8910047F3FF /* CKPlayer */,
 				284A054B20947F1900AC7421 /* Configs */,
 				28D35EA72089990700229299 /* Player */,
@@ -196,6 +200,8 @@
 		28638B802099A8910047F3FF /* CKPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				28D35EAB2089995900229299 /* FFPlayerViewController.h */,
+				28D35EAC2089995900229299 /* FFPlayerViewController.m */,
 				28638B842099A8F40047F3FF /* CKPlayerConfiguration.h */,
 				28638B852099A8F40047F3FF /* CKPlayerConfiguration.m */,
 				28638B812099A8AF0047F3FF /* CKPlayerView.h */,
@@ -206,11 +212,18 @@
 			path = CKPlayer;
 			sourceTree = "<group>";
 		};
+		28638B8A209AB7470047F3FF /* CKCaptureMovie */ = {
+			isa = PBXGroup;
+			children = (
+				28638B8B209AB7610047F3FF /* CKCaptureMovieViewController.h */,
+				28638B8C209AB7610047F3FF /* CKCaptureMovieViewController.m */,
+			);
+			path = CKCaptureMovie;
+			sourceTree = "<group>";
+		};
 		28D35EA72089990700229299 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				28D35EAB2089995900229299 /* FFPlayerViewController.h */,
-				28D35EAC2089995900229299 /* FFPlayerViewController.m */,
 				284A05852094844400AC7421 /* FFPlayerConfiguration.h */,
 				284A05862094844400AC7421 /* FFPlayerConfiguration.m */,
 				284A05822094842F00AC7421 /* FFPlayerControlsView.h */,
@@ -296,6 +309,7 @@
 			files = (
 				284A057D20947F4F00AC7421 /* View+MASAdditions.m in Sources */,
 				284A058A209485AB00AC7421 /* FFVideoPlayerView.m in Sources */,
+				28638B8D209AB7610047F3FF /* CKCaptureMovieViewController.m in Sources */,
 				2825767B20872EC0004D1D38 /* ViewController.m in Sources */,
 				2825768620872EC0004D1D38 /* main.m in Sources */,
 				28638B892099A9610047F3FF /* CKPlayerControlsView.m in Sources */,

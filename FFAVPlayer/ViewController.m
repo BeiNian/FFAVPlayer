@@ -12,15 +12,18 @@
 
 
 @interface ViewController ()
- 
+
+@property (nonatomic, nullable, strong) NSString *name;
 @end
 
 @implementation ViewController
-
+@synthesize name = _name;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+     
+    
 //
 //    if ([[UIDevice currentDevice].systemVersion floatValue] > 7.0) {
 //        self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -49,11 +52,13 @@
     FFPlayerViewController *playerPractice = [[FFPlayerViewController alloc] init];
     [self.navigationController pushViewController:playerPractice animated:YES];
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event  {
-    FFPlayerViewController *playerPractice = [[FFPlayerViewController alloc] init];
-    [self.navigationController pushViewController:playerPractice animated:YES];
+- (IBAction)CaptureMovie:(UIButton *)sender {
 }
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event  {
+//    FFPlayerViewController *playerPractice = [[FFPlayerViewController alloc] init];
+//    [self.navigationController pushViewController:playerPractice animated:YES];
+//}
 
 
 @end
